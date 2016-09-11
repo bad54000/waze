@@ -1,0 +1,13 @@
+paris_barcelone:
+  name: Paris - Barcelone
+  dep_lo: 2.3522219000000177
+  dep_la: 48.856614
+  arr_lo: 2.1734034999999494
+  arr_la: 41.38506389999999
+
+bordeau_nancy:
+  name: Bordeau - Nancy
+  dep_lo: -0.5791799999999512
+  dep_la: 44.837789
+  arr_lo: 6.184416999999939
+  arr_la: 48.692054
