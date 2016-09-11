@@ -11,3 +11,14 @@ RUN buildRequirements="libyaml-dev" \
     && echo "extension=yaml.so" > /usr/local/etc/php/conf.d/ext-yaml.ini \
     && apt-get purge -y ${buildRequirements} \
     && rm -rf /var/lib/apt/lists/*
+
+#Install Cron
+RUN apt-get update
+RUN apt-get -y install supervisor cron
+
+# cron
+ADD crontab /etc/cron.d/waze-cron
+RUN chmod 0644 /etc/cron.d/waze-cron
+ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+
+CMD ["supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
