@@ -1,0 +1,27 @@
+nancy_lux:
+  name: Nancy - Luxembourg
+  dep_lo: 6.22915839999996
+  dep_la: 48.7006089
+  arr_lo: 5.970293800000036
+  arr_la: 49.5163402
+
+lux_nancy:
+  name: Luxembourg - Nancy
+  dep_lo: 5.970293800000036
+  dep_la: 49.5163402
+  arr_lo: 6.22915839999996
+  arr_la: 48.7006089
+
+home_lux:
+  name : Knutange - Luxembourg
+  dep_lo: 6.0441951000000245
+  dep_la: 49.3377924
+  arr_lo: 5.970293800000036
+  arr_la: 49.5163402
+
+lux_home:
+  name: Luxembourg - Knutange
+  dep_lo: 6.0441951000000245
+  dep_la: 49.3377924
+  arr_lo: 5.970293800000036
+  arr_la: 49.5163402

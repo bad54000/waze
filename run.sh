@@ -1,0 +1,1 @@
+docker run --rm -it -v $(pwd)/www:/var/www/html -e VIRTUAL_HOST=waze.lo waze
