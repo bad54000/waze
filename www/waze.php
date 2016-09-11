@@ -118,7 +118,7 @@ foreach ($tracks as $t) {
         $i++;
     }
     $str = substr($str, 0, -3);
-
+    echo "Last check : ".date('d/m/Y H:i');
     file_put_contents($t['short'].'.txt', $str);
 
 }
