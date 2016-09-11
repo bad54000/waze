@@ -1,5 +1,10 @@
 <?php
+
 function checkparam($argc, $argv) {
+    if (!isset($_SERVER['PWD'])) {
+        die('cli only');
+    }
+
     if ($argc < 2) {
         $argv = array_merge($argv, getAllTracks());
     }
@@ -103,7 +108,7 @@ foreach ($tracks as &$track) {
     $track['results'] = check($track['dep_lo'], $track['dep_la'], $track['arr_lo'], $track['arr_la']);
 }
 
-array_map('unlink', glob("*.txt"));
+array_map('unlink', glob(dirname(__FILE__)."/*.txt"));
 ob_start();
 foreach ($tracks as $t) {
     $i = 1;
@@ -119,8 +124,8 @@ foreach ($tracks as $t) {
     }
     $str = substr($str, 0, -3);
     echo "Last check : ".date('d/m/Y H:i');
-    file_put_contents($t['short'].'.txt', $str);
+    file_put_contents(dirname(__FILE__).'/'.$t['short'].'.txt', $str);
 
 }
-file_put_contents('live.html', ob_get_contents());
+file_put_contents(dirname(__FILE__).'/live.html', ob_get_contents());
 ob_clean();
