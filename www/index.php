@@ -10,7 +10,8 @@ if (!isset($_GET['track']) && !isset($track)) {
 	}
 } else {
 	$_track = isset($_GET['track']) ? $_GET['track'] : '';
-	$_track = isset($track) ? $track : '';
+	$_track = $_track ?: (isset($track) ? $track : '');
+
 	if (file_exists($_track.'.txt')) {
 		echo file_get_contents($_track.'.txt');
 	} else {
