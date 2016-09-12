@@ -1,0 +1,29 @@
+<?php
+
+include_once 'bootstrap.php';
+
+$day = date("l", time());
+$hour = date("h", time());
+$track = '';
+
+switch ($day) {
+	case 'Monday':
+		if ($hour < 12) {
+			$track = 'paris_barcelone';
+		}
+		break;
+
+	case 'Tuesday':
+	case 'Wednesday':
+	case 'Thursday':
+	case 'Friday':
+		if ($hour < 12) {
+			$track = 'bordeau_nancy';
+		}
+		break;
+
+	case 'Saturday':
+	case 'Sunday':
+}
+
+include 'index.php';

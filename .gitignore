@@ -1,5 +1,7 @@
 /crontab
 www/tracks.yml
+www/my.php
 *.log
 *.txt
 *.html
+*.pid
